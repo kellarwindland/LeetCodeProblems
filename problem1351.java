@@ -10,6 +10,8 @@ class Solution {
             for(int j = 0; j < temp.length; j++){
                 if(temp[j] < 0){
                     count++;
+                    count = count + (temp.length - j - 1);
+                    break;
                 }
             }
             
