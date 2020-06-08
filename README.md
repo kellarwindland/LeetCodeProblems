@@ -49,4 +49,15 @@ Parameters
 None
 
 Return Value
-It returns a pseudorandom double value greater than or equal to 0.0 and less than 1.0. 
+It returns a pseudorandom double value greater than or equal to 0.0 and less than 1.0.
+
+String.split(String regex):
+
+Description
+Takes a string and then a delimiting expression and splits the string into smaller strings returned in a string array
+
+Parameters
+regex - a delimiting regular expression
+
+Return Value
+An array of strings computed by splitting the given string.
