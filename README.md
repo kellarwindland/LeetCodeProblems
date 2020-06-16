@@ -61,3 +61,47 @@ regex - a delimiting regular expression
 
 Return Value
 An array of strings computed by splitting the given string.
+
+Pattern.compile(String regex, int flags):
+
+Description
+Compiles the given regular expression into a pattern with the given flags.
+
+Parameters
+regex - The expression to be compiled
+flags - Match flags, a bit mask that may include CASE_INSENSITIVE, MULTILINE, DOTALL, UNICODE_CASE, CANON_EQ, UNIX_LINES, LITERAL, UNICODE_CHARACTER_CLASS and COMMENTS
+
+Return Value
+Returns a pattern that can used
+
+Pattern.matcher(CharSequence input)
+Description
+Creates a matcher that will match the given input against this pattern.
+
+Parameters
+input - The character sequence to be matched
+
+Return Value
+A new matcher for this pattern
+
+public static boolean matches(String regex,
+              CharSequence input)
+Compiles the given regular expression and attempts to match the given input against it.
+An invocation of this convenience method of the form
+
+Pattern.matches(regex, input);
+ 
+Description
+Compiles the given regular expression and attempts to match the given input against it.
+behaves in exactly the same way as the expression, could also do Pattern.compile(regex).matcher(input).matches()
+If a pattern is to be used multiple times, compiling it once and reusing it will be more efficient than invoking this method each time.
+
+Parameters
+regex - The expression to be compiled
+input - The character sequence to be matched
+
+Return Value
+True if it can match it to the pattern and false otherwise
+
+IMPORTANT LINK TO THE PATTERN API: https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
+
