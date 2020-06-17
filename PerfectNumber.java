@@ -18,10 +18,8 @@ class Solution {
                     sum += i;
                     if(holder != num){
                         sum += holder;
-                        //System.out.println("This: " + i + " and " + holder);
                     }
                     pre = holder;
-                    //System.out.println(holder);
                 }
             }else{
                 break;
