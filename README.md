@@ -118,4 +118,24 @@ The number of non-crossing partitions of a set of n elements.
 The number of ways to cover the ladder 1…n using n rectangles (The ladder consists of n columns, where ith column has a height i).
 
 ### How to use
-Use with dynamic programming to reduce work that the code does, so there is no overlapping calculations.
+Use with dynamic programming to reduce work that the code does, so there is no overlapping calculations
+
+## Floyd's Tortoise and Hare
+
+### Description
+Pointer algorithm that uses only two pointers, which move through the sequence at different speeds
+
+### Applications
+Cycle detection within a graph
+Help to find duplicate numbers in an array
+
+### How to use
+Phase 1 
+hare = nums[nums[hare]] is twice as fast as tortoise = nums[tortoise]. Since the hare goes fast, it would be the first one who enters the cycle and starts to run 
+around the cycle. At some point, the tortoise enters the cycle as well, and since it's moving slower the hare catches the tortoise up at some intersection point. Now phase 1 is 
+over, and the tortoise has lost.
+Phase 2
+We give the tortoise a second chance by slowing down the hare, so that it now moves with the speed of tortoise: tortoise = nums[tortoise], hare = nums[hare]. The tortoise is 
+back at the starting position, and the hare starts from the intersection point.
+The answer is then the intersection of hare and tortoise after phase 2 ends
+
