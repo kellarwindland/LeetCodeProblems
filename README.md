@@ -139,3 +139,26 @@ We give the tortoise a second chance by slowing down the hare, so that it now mo
 back at the starting position, and the hare starts from the intersection point.
 The answer is then the intersection of hare and tortoise after phase 2 ends
 
+## Depth First Search (DFS)
+
+### Description
+Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking
+
+### Applications
+Finding connected components
+Topological sorting
+Finding 2-(edge or vertex)-connected components
+Finding 3-(edge or vertex)-connected components
+Finding the bridges of a graph
+Generating words in order to plot the limit set of a group
+Finding strongly connected components
+Planarity testing
+Solving puzzles with only one solution, such as mazes (DFS can be adapted to find all solutions to a maze by only including nodes 
+on the current path in the visited set.)
+Maze generation may use a randomized depth-first search
+Finding biconnectivity in graphs
+
+### How to use
+Input: A graph G and a vertex v of G
+Output: All vertices reachable from v labeled as discovered
+Starts with the given v of G and discovers all other vertices within that graph. Starting with a random path from v and discovering all other vertices in that path before coming back to v and searching another path.
