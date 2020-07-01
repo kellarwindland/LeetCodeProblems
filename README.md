@@ -161,4 +161,20 @@ Finding biconnectivity in graphs
 ### How to use
 Input: A graph G and a vertex v of G
 Output: All vertices reachable from v labeled as discovered
-Starts with the given v of G and discovers all other vertices within that graph. Starting with a random path from v and discovering all other vertices in that path before coming back to v and searching another path.
+Starts with the given v of G and discovers all other vertices within that graph. Starting with a random path from v and discovering all other vertices in that path before coming 
+back to v and searching another path.
+
+## Iterating Through HashMap
+
+### Description
+In order to access all the different entries within a HashMap, doing a for each loop is the most simple way I have found to do so
+
+### Applications
+Visiting all entries
+Having the ability to modify values
+
+### How to use
+for(Map.Entry element : map.entrySet()){
+   Object key = elemenet.getKey();
+   Object value = element.getValue();
+}
