@@ -1,0 +1,36 @@
+// Given an unsorted array of integers nums,
+// return the length of the longest continuous increasing subsequence (i.e. subarray).
+// The subsequence must be strictly increasing.
+// A continuous increasing subsequence is defined by two indices l and r (l < r) such that it is
+// [nums[l], nums[l + 1], ..., nums[r - 1], nums[r]] and for each l <= i < r, nums[i] < nums[i + 1].
+
+class Solution {
+    public int findLengthOfLCIS(int[] nums) {
+        
+        int result = 1;
+        int currStreak = 1;
+        
+        if(nums.length == 0){
+            return 0;
+        }
+        
+        for(int i = 0; i < nums.length - 1; i++){
+            if(nums[i] < nums[i + 1]){
+                currStreak++;
+            }else{
+                if(currStreak > result){
+                    result = currStreak;
+                }
+                currStreak = 1;
+            }
+            
+            if(currStreak > result){
+                result = currStreak;
+            }
+            
+        }
+        
+        return result;
+        
+    }
+}
